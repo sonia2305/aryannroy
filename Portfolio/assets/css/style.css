@@ -136,7 +136,7 @@ hr.star-primary:after {
 
 header {
     text-align: center;
-    color: #fff;
+    color: #000;
     background: url(../images/pic4.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -463,4 +463,8 @@ button.btn.btn-form:hover{
 
 .scroll-top .btn:focus {
     outline: 0;
+}
+
+#logo {
+	float: right;
 }

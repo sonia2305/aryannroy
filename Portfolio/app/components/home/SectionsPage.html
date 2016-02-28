@@ -1,49 +1,29 @@
 
      <!-- ============ Work ============= -->
 
-    <section id="{{section}}" ng-repeat="section in sections">
+    <section id="{{section.SectionName}}" ng-repeat="section in sections">
         <div class="container">
             <div class="row">
-                <div class="col-sm-4 col-md-6 text-side-right">
-                   <h3 class="title-page ">{{section}}</h3>
+                <div class="col-md-6 text-side-right">
+                   <h3 class="title-page ">{{section.SectionName}}</h3>
                    <hr>
-                   <h4 class="list-text">University of London</h4>
-                   <p class="list-text-p">2012-2014 Master Degree</p>
-                  <br>
-                   <h4 class="list-text">National University of Newyork</h4>
-                   <p class="list-text-p">2012-2014 Master Degree </p>
-                  <br>
-                   <h4 class="list-text">University of London </h4>
-                   <p class="list-text-p">2012-2014 Master Degree</p>
+                   <tabset>
+                   	<tab ng-repeat="subsection in section.Categories" heading="{{subsection.SubsectionName}}">
+                   		<a href="#">{{subsection.SubsectionName}}</a>
+                   	</tab>
+                   </tabset>                   
                 </div>
-                <div class="col-sm-8 col-md-6 circ-bg">
-                    <div class="circular-bar">
-                       <div class="c100 p85 text-center">
-                            <span>85%</span>
-                            <div class="slice">
-                                <div class="bar"></div>
-                                <div class="fill"></div>
-                            </div>
-                            <p class="text-circle">Master Degree </p>
-                        </div>
-                        <div class="c100 p75">
-                            <span>75%</span>
-                                <div class="slice">
-                                    <div class="bar"></div>
-                                    <div class="fill"></div>
-                                </div>
-                                <p class="text-circle">Honors Degree </p>
-                        </div>
-                        <div class="c100 p55 ">
-                        <span>50%</span>
-                            <div class="slice">
-                                <div class="bar"></div>
-                                <div class="fill"></div>
-                            </div>
-                            <p class="text-circle">HSc. Degree </p>
-                        </div>
-                    </div>
-                </div>
+                <div class="col-md-6">
+				    <uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
+				      <uib-slide ng-repeat="slide in section.Slides track by slide.id" index="slide.id">
+				        <img ng-src="{{slide.image}}" style="margin:auto;">
+				        <div class="carousel-caption">
+				          <h4>Slide {{slide.id}}</h4>
+				          <p>{{slide.text}}</p>
+				        </div>
+				      </uib-slide>
+				    </uib-carousel>
+				  </div>
             </div>
         </div>
     </section>

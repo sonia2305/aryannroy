@@ -1,15 +1,27 @@
 [
 	{
-	"SectionName":"Portfolio",
+	"SectionName":"Work",
 	"Categories":[
 			{"SubsectionName":"Movies","Values":""},
 			{"SubsectionName":"Advertisement","Values":""},
 			{"SubsectionName":"Others","Values":""},
 			{"SubsectionName":"All","Values":""}
+			],
+	"Slides":[
+			{
+		    	"id": "image1",
+		    	"text":"image1",
+		    	"image": "http://lorempixel.com/400/200/"
+		    },
+		    {
+		    	"id": "image2",
+		    	"text":"image2",
+		      "image": "http://lorempixel.com/400/200/food"
+		    }
 			]
 	},
 	{
-	"SectionName":"Work",
+	"SectionName":"Portfolio",
 	"Categories":[
 			{"SubsectionName":"Movies","Values":""},
 			{"SubsectionName":"Advertisement","Values":""},

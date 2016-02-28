@@ -30,8 +30,9 @@
 
 <!-- AngularJS -->
 <script src="assets/js/angular.min.js"></script>
-<script src="assets/js/angular-route.min.js"></script>
+<script src="assets/js/angular-ui-router.min.js"></script>
 <script src="assets/js/angular-sanitize.min.js"></script>
+<script src="assets/js/ui-bootstrap-tpls-1.2.1.min.js"></script>
 
 </head>
 
@@ -43,16 +44,18 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
+					<div id="logo">
 					<img ng-src="{{logoImage}}" width="200" class="img-circle" alt="">
-					<div class="intro-text" ng-bind-html="<b>hi</b>"><!-- 						
-						<span class="skills" ng-bind-html="<b>hi</b>"></span> -->
+					<div class="intro-text">						
+						<span class="skills" ng-bind-html="logoText"></span>
+					</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</header>
 
-	<div ng-view></div>
+	<div ui-view></div>
 
 	<!-- ============ Footer ============= -->
 
