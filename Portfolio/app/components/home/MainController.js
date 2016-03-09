@@ -1,4 +1,6 @@
-app.controller("MainController", function($scope, $http) {
+app.controller("MainController", function($scope, $http, Carousel, $location, $anchorScroll) {
+	
+	$scope.Carousel = Carousel;
 	
 	$http.get("app/shared/json/ApplicationProperties.json").success(function(response) {
 		$scope.title = response.title;
@@ -24,7 +26,7 @@ app.controller("MainController", function($scope, $http) {
 	}
 	
 	
-	$scope.myInterval = 5000;
+	$scope.myInterval = 3000;
 	  $scope.noWrapSlides = false;
 	  $scope.active = 0;
 	  var currIndex = 0;
@@ -65,4 +67,10 @@ app.controller("MainController", function($scope, $http) {
 
 	    return array;
 	  }
+	  
+	  $scope.scrollTo = function(id) {
+	      $location.hash(id);
+	      $anchorScroll();
+	   }
+	  
 });

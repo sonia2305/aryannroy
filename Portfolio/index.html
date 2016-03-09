@@ -16,6 +16,7 @@
 <link href="assets/css/style.css" rel="stylesheet">
 <link href="assets/css/circle.css" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style-portfolio.css">
+<link href="assets/css/angular-carousel.min.css" rel="stylesheet">
 
 <!-- Custom Fonts -->
 <link href="assets/fontawesome/css/font-awesome.min.css"
@@ -27,18 +28,22 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-
 <!-- AngularJS -->
 <script src="assets/js/angular.min.js"></script>
 <script src="assets/js/angular-ui-router.min.js"></script>
 <script src="assets/js/angular-sanitize.min.js"></script>
-<script src="assets/js/ui-bootstrap-tpls-1.2.1.min.js"></script>
 
 </head>
 
 <body id="page-top" class="index">
 
-
+	<div class="col-md-12" id="menu">
+		<div>
+			<a class="navbar-brand" href="" id="menu_{{section.SectionName}}" ng-repeat="section in sections" ng-click="scrollTo('{{section.SectionName}}')">
+				{{section.SectionName}}
+			</a>
+		</div>
+	</div>
 	<!-- ============ Header ============= -->
 	<header>
 		<div class="container">
@@ -101,6 +106,8 @@
 	<script src="assets/js/main.js"></script>
 	<script type="text/javascript"
 		src="assets/js/jquery.mixitup.min.js"></script>
+	<script src="assets/js/angular-carousel.js"></script>
+	<script src="assets/js/hammer.min.js"></script>
 
 	<!-- AngularJS -->
 	<!-- Module -->

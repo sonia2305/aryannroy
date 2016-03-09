@@ -1,4 +1,4 @@
-var app = angular.module("mainModule", [ 'ui.router', 'ngSanitize', 'ui.bootstrap' ]);
+var app = angular.module("mainModule", [ 'ui.router', 'ngSanitize', 'angular-carousel' ]);
 
 app.config(function($stateProvider, $urlRouterProvider) {
 
@@ -60,3 +60,16 @@ app.directive('tabset', function() {
 	    }
 	  }
 	})
+	
+	app.directive('onFinishRender', function($timeout) {
+		return {
+			restrict : 'A',
+			link : function(scope, element, attr) {
+				if (scope.$last === true) {
+					$timeout(function() {
+						scope.$emit('ngRepeatFinished');
+					});
+				}
+			}
+		}
+	});

@@ -1,5 +1,9 @@
 [
 	{
+	"SectionName":"Want to know Aryann",
+	"Body":"Aryann Roy is an Actor. He has done three Regional movies, the latest being one of Bengal's renowned directors, Srijit Mukherjee. The movie is in Post-production."
+	},
+	{
 	"SectionName":"Work",
 	"Categories":[
 			{"SubsectionName":"Movies","Values":""},
@@ -11,12 +15,22 @@
 			{
 		    	"id": "image1",
 		    	"text":"image1",
-		    	"image": "http://lorempixel.com/400/200/"
+		    	"image": "assets/images/pic1.jpg"
 		    },
 		    {
 		    	"id": "image2",
 		    	"text":"image2",
-		      "image": "http://lorempixel.com/400/200/food"
+		      	"image": "assets/images/pic2.jpg"
+		    },
+		    {
+		    	"id": "image3",
+		    	"text":"image3",
+		    	"image": "assets/images/pic3.jpg"
+		    },
+		    {
+		    	"id": "image4",
+		    	"text":"image4",
+		      	"image": "assets/images/pic4.jpg"
 		    }
 			]
 	},

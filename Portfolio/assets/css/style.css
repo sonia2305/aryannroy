@@ -136,8 +136,8 @@ hr.star-primary:after {
 
 header {
     text-align: center;
-    color: #000;
-    background: url(../images/pic4.jpg) no-repeat center center fixed;
+    color: #fff;
+    background: url(../images/pic4.jpg) no-repeat 0% -5% fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -467,4 +467,32 @@ button.btn.btn-form:hover{
 
 #logo {
 	float: right;
+}
+
+.ng-carousel slide {
+    background-color: #999;
+    text-align: center;
+    font-size: 148px;
+    line-height: 300px;
+    color: #bbb;
+}
+
+.ng-carousel slide:nth-child(odd) {
+  background-color: #aaa;
+  color: #ccc;
+}
+.navbar-brand {
+  padding: 10px 15px;
+  font-size: 18px;
+  line-height: 20px;
+  height: 45px;
+  color: #fff;
+}
+.navbar-brand:hover,
+.navbar-brand:focus {
+  text-decoration: none;
+}
+
+#menu {
+	background-color: #F2F2F2;
 }

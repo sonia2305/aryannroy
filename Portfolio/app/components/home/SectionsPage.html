@@ -4,26 +4,27 @@
     <section id="{{section.SectionName}}" ng-repeat="section in sections">
         <div class="container">
             <div class="row">
-                <div class="col-md-6 text-side-right">
-                   <h3 class="title-page ">{{section.SectionName}}</h3>
-                   <hr>
+                <h3 class="title-page ">{{section.SectionName}}</h3>
+                <hr>
+				<div class="col-md-12" ng-show="section.Body.length">
+					{{section.Body}}
+				</div>
+                <div class="col-md-6 text-side-right" ng-show="section.Categories.length">
                    <tabset>
                    	<tab ng-repeat="subsection in section.Categories" heading="{{subsection.SubsectionName}}">
                    		<a href="#">{{subsection.SubsectionName}}</a>
                    	</tab>
                    </tabset>                   
                 </div>
-                <div class="col-md-6">
-				    <uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
-				      <uib-slide ng-repeat="slide in section.Slides track by slide.id" index="slide.id">
-				        <img ng-src="{{slide.image}}" style="margin:auto;">
-				        <div class="carousel-caption">
-				          <h4>Slide {{slide.id}}</h4>
-				          <p>{{slide.text}}</p>
-				        </div>
-				      </uib-slide>
-				    </uib-carousel>
-				  </div>
+                <div class="col-md-6" ng-show="section.Slides.length">
+                    <div ng-carousel ng-carousel-name="{{section.SectionName}}-carousel" ng-carousel-timer="{{myInterval}}">
+		                <slidecontainer>
+		                    <slide ng-repeat = "slide in section.Slides">
+		                    	<img ng-src="{{slide.image}}" alt="{{slide.text}}" class="img-responsive">
+		                    </slide>
+		                </slidecontainer>
+		            </div>
+				</div>
             </div>
         </div>
     </section>
