@@ -12,7 +12,15 @@
                 <div class="col-md-6 text-side-right" ng-show="section.Categories.length">
                    <tabset>
                    	<tab ng-repeat="subsection in section.Categories" heading="{{subsection.SubsectionName}}">
-                   		<a href="#">{{subsection.SubsectionName}}</a>
+                   		<div class="col-md-6" ng-show="subsection.Slides.length">
+		                    <div ng-carousel ng-carousel-name="{{section.SectionName}}-{{subsection.SubsectionName}}-carousel" ng-carousel-timer="{{myInterval}}">
+				                <slidecontainer>
+				                    <slide ng-repeat = "slide in subsection.Slides">
+				                    	<img ng-src="{{slide.image}}" alt="{{slide.text}}" class="img-responsive">
+				                    </slide>
+				                </slidecontainer>
+				            </div>
+						</div>
                    	</tab>
                    </tabset>                   
                 </div>

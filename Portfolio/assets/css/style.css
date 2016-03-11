@@ -175,15 +175,16 @@ header img {
     margin: 0 auto 20px;
 }
 
-header .intro-text .name {
+header .intro-text {
     display: block;
     text-transform: uppercase;
     font-family: 'Roboto Slab', serif;
     font-size: 2em;
     font-weight: 700;
+    color: #3c763d;
 }
 
-header .intro-text .skills {
+header .intro-text {
     font-size: 1.25em;
     font-weight: 300;
 }
@@ -194,11 +195,11 @@ header .intro-text .skills {
         padding-bottom: 186px;
     }
 
-    header .intro-text .name {
+    header .intro-text {
         font-size: 4.75em;
     }
 
-    header .intro-text .skills {
+    header .intro-text {
         font-size: 1.75em;
     }
 }
@@ -470,29 +471,48 @@ button.btn.btn-form:hover{
 }
 
 .ng-carousel slide {
-    background-color: #999;
+    background-color: #fff;
     text-align: center;
+    align: middle;
     font-size: 148px;
     line-height: 300px;
     color: #bbb;
 }
 
 .ng-carousel slide:nth-child(odd) {
-  background-color: #aaa;
+  text-align: center;
+  align: middle;
+  background-color: #fff;
   color: #ccc;
 }
-.navbar-brand {
-  padding: 10px 15px;
-  font-size: 18px;
+.navbar-inverse .navbar-brand {
+  font-size: 20px;
   line-height: 20px;
   height: 45px;
-  color: #fff;
+  color:  #e7f3c5;
+  font-weight: bold;
 }
-.navbar-brand:hover,
-.navbar-brand:focus {
+.navbar-inverse .navbar-brand:hover,
+.navbar-inverse .navbar-brand:focus {
   text-decoration: none;
+  color:  #fafcf3;
 }
 
-#menu {
-	background-color: #F2F2F2;
+.navbar-brand span {
+	font-size: 13px;
 }
+
+.navbar-inverse {
+	background-color: #aaa;
+}
+
+.navbar {
+	margin-bottom: 0px;
+}
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
+	background-color: #d6e9c6;
+	color: #3c763d;
+	font-size: 20px;
+}
+
+

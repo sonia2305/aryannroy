@@ -1,12 +1,14 @@
 app.controller("MainController", function($scope, $http, Carousel, $location, $anchorScroll) {
 	
 	$scope.Carousel = Carousel;
+	$scope.TabNumber = -1;
 	
 	$http.get("app/shared/json/ApplicationProperties.json").success(function(response) {
 		$scope.title = response.title;
 		$scope.headerBackgroundImage = response.headerBackgroundImage;
 		$scope.logoImage = response.logoImage;
 		$scope.logoText = response.logoText;
+		$scope.AboutShortDesc = response.AboutShortDesc;
 	});
 	
 	$scope.sections = [];
@@ -68,9 +70,17 @@ app.controller("MainController", function($scope, $http, Carousel, $location, $a
 	    return array;
 	  }
 	  
-	  $scope.scrollTo = function(id) {
-	      $location.hash(id);
-	      $anchorScroll();
-	   }
+	  $scope.scrollTo = function(destinationId, menuIndex) {
+		  $scope.TabNumber = menuIndex;
+		  if ($location.hash() !== destinationId) {
+		        // set the $location.hash to `newHash` and
+		        // $anchorScroll will automatically scroll to it
+	        $location.hash('' + destinationId);
+	      } else {
+	        // call $anchorScroll() explicitly,
+	        // since $location.hash hasn't changed
+	        $anchorScroll();
+	      }
+	   };
 	  
 });
