@@ -7,37 +7,60 @@
 	"SectionName":"Work",
 	"Categories":[
 			{
-				"SubsectionName":"Movies",
-				"Slides":[
-							{
-						    	"id": "image1",
-						    	"text":"image1",
-						    	"image": "assets/images/pic1.jpg"
-						    },
-						    {
-						    	"id": "image2",
-						    	"text":"image2",
-						      	"image": "assets/images/pic2.jpg"
-						    },
-						    {
-						    	"id": "image3",
-						    	"text":"image3",
-						    	"image": "assets/images/pic3.jpg"
-						    },
-						    {
-						    	"id": "image4",
-						    	"text":"image4",
-						      	"image": "assets/images/pic4.jpg"
-						    }
-						]
-			},
-			{"SubsectionName":"Advertisement","Values":""
-			},
-			{"SubsectionName":"Others","Values":""
-			},
-			{"SubsectionName":"All","Values":""
-			}
-			]
+		    	"id": "SadaKaaloAbhcha",
+		    	"text":"Sada Kaalo Abhcha",
+		    	"category":"Movie",
+		    	"language":"Bengali",
+		    	"date":"2014",
+		    	"directedBy":"Riingo Banerjee",
+		    	"producedBy":"",
+		    	"image": "assets/images/work/ska.jpg"
+		    },
+		    {
+		    	"id": "EkJeAcheShohor",
+		    	"text":"Ek Je Ache Shohor",
+		    	"category":"Movie",
+		    	"language":"Bengali",
+		    	"date":"Post-Production",
+		    	"directedBy":"Riingo Banerjee",
+		    	"producedBy":"",
+		      	"image": "assets/images/work/ekjeachesohor.jpg"
+		    },
+		    {
+		    	"id": "Zulfiqar",
+		    	"text":"Zulfiqar",
+		    	"category":"Movie",
+		    	"language":"Bengali",
+		    	"date":"Post-Production",
+		    	"directedBy":"Srijit Mukherjee",
+		    	"producedBy":"Sri Venkatesh Films",
+		    	"image": "assets/images/pic4.jpg"
+		    },
+		    {
+		    	"id": "AnjaliJewellers",
+		    	"text":"Anjali Jewellers",
+		    	"category":"TV Commercials",
+		    	"language":"Bengali",
+		    	"directedBy":"Anik Dutta",
+		    	"image": "assets/images/pic3.jpg"
+		    },
+		    {
+		    	"id": "CitiMart",
+		    	"text":"Citi Mart",
+		    	"category":"TV Commercials",
+		    	"language":"Bengali",
+		    	"directedBy":"",
+		    	"image": "assets/images/pic3.jpg"
+		    },
+		    {
+		    	"id": "P.C.ChandraJewellers",
+		    	"text":"P.C. Chandra Jewellers",
+		    	"category":"TV Commercials",
+		    	"language":"Bengali",
+		    	"directedBy":"",
+		    	"image": "assets/images/pic3.jpg"
+		    }
+		]
 	},
 	{
 	"SectionName":"Portfolio",

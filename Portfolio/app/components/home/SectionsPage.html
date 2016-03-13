@@ -1,29 +1,32 @@
 
      <!-- ============ Work ============= -->
 
-    <section id="{{section.SectionName}}" ng-repeat="section in sections">
+    <section class="bg-primary" id="{{section.SectionName}}" ng-repeat="section in sections">
         <div class="container">
             <div class="row">
-                <h3 class="title-page ">{{section.SectionName}}</h3>
-                <hr>
-				<div class="col-md-12" ng-show="section.Body.length">
-					{{section.Body}}
-				</div>
-                <div class="col-md-6 text-side-right" ng-show="section.Categories.length">
-                   <tabset>
-                   	<tab ng-repeat="subsection in section.Categories" heading="{{subsection.SubsectionName}}">
-                   		<div class="col-md-6" ng-show="subsection.Slides.length">
-		                    <div ng-carousel ng-carousel-name="{{section.SectionName}}-{{subsection.SubsectionName}}-carousel" ng-carousel-timer="{{myInterval}}">
-				                <slidecontainer>
-				                    <slide ng-repeat = "slide in subsection.Slides">
-				                    	<img ng-src="{{slide.image}}" alt="{{slide.text}}" class="img-responsive">
-				                    </slide>
-				                </slidecontainer>
-				            </div>
-						</div>
-                   	</tab>
-                   </tabset>                   
+            	<div class="col-lg-8 col-lg-offset-2 text-center" ng-show="section.Body.length">
+                    <h2 class="section-heading">{{section.SectionName}}</h2>
+                    <hr class="light">
+                    <p class="text-faded">{{section.Body}}</p>
                 </div>
+                <div class="row no-gutter" ng-show="section.Categories.length">
+                	<div class="col-lg-4 col-sm-6" ng-repeat="subsection in section.Categories">
+	                    <a href="#" class="portfolio-box">
+	                        <img ng-src="{{subsection.image}}" alt="{{subsection.text}}" class="img-responsive">
+	                        <div class="portfolio-box-caption">
+	                            <div class="portfolio-box-caption-content">
+	                                <div class="project-category text-faded">
+	                                    {{subsection.category}}
+	                                </div>
+	                                <div class="project-name">
+	                                    {{subsection.text}}
+	                                </div>
+	                            </div>
+	                        </div>
+	                    </a>
+	                </div>
+                </div>
+                
                 <div class="col-md-6" ng-show="section.Slides.length">
                     <div ng-carousel ng-carousel-name="{{section.SectionName}}-carousel" ng-carousel-timer="{{myInterval}}">
 		                <slidecontainer>
